@@ -1,0 +1,210 @@
+@import "~antd/lib/style/themes/default.less";
+
+body{
+  background: url('../../assets/loginBackground.png')
+}
+
+@keyframes scroll {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fscroll {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.left {
+  float: left;
+  margin-left: 16%;
+
+  .wrap {
+    position: relative;
+
+    .wrapimg {
+      transform-origin: 52% 52%;
+      animation: scroll 20s infinite linear;
+      position: absolute;
+      left: -114px;
+      top: -43px;
+      width: 500px;
+    }
+
+    .ball {
+      animation: fscroll 20s infinite linear;
+      position: absolute;
+      top: 89px;
+    }
+  }
+}
+
+.main {
+  box-shadow: 5px 2px 20px #477eb1;
+  width: 420px;
+  background: #fff;
+  float: right;
+  margin-right: 9%;
+  border-radius: 5px;
+  padding: 0 45px 35px;
+  position: relative;
+  margin-top: 10%;
+  .top {
+    width: 89%;
+    margin-bottom: 36px;
+    margin-top: 20px;
+    white-space: nowrap;
+    .loginLogo {
+      width: 110px;
+      margin-top: -10px;
+      margin-right: 20px;
+    }
+
+    .loginBox {
+      //margin-left: 25px;
+      font-weight: 500;
+      font-size: 22px;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #3A87E4;
+    }
+  }
+
+  :global {
+    ::-webkit-input-placeholder {
+      color: #bbb;
+    }
+
+    .ant-input-prefix {
+      left: 7px;
+    }
+
+    .ant-btn {
+      background-color: @primary-color !important;
+    }
+
+    .anticon {
+      color: #bbb;
+    }
+
+    .ant-alert-icon {
+      top: 6.5px;
+    }
+
+    .has-error .ant-form-explain {
+      float: left;
+    }
+
+    .ant-input-affix-wrapper {
+      border-radius: 5px;
+    }
+
+    .ant-alert-message {
+      margin-left: 20px;
+    }
+
+    .anticon {
+      font-size: 25px !important;
+    }
+
+    .ant-input.ant-input-lg {
+      text-indent: 12px;
+    }
+  }
+
+  .icon {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.2);
+    margin-left: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: color .3s;
+
+    &:hover {
+      color: @primary-color;
+    }
+  }
+
+  .other {
+    text-align: left;
+    margin-top: 24px;
+    line-height: 22px;
+
+    .register {
+      color: #12c5cc;
+      float: right;
+    }
+  }
+}
+
+.loginTab::before {
+  content: "手机扫描APP下载";
+  display: inline-block;
+  vertical-align: bottom;
+  padding-right: 10px;
+  margin-bottom: -2px;
+}
+
+.login_tab_code::before {
+  content: "返回账号密码登陆";
+  display: inline-block;
+  vertical-align: bottom;
+  padding-right: 10px;
+  margin-bottom: -2px;
+}
+
+.codeTab {
+  width: 330px;
+  height: 355.141px;
+  text-align: center;
+  .codeTab_title {
+    font-size:26px;
+    font-family:Microsoft YaHei;
+    font-weight:400;
+    color:rgba(58,135,228,1);
+    margin-top: 38px;
+    margin-bottom: 56px;
+  }
+  .codeTab_content {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+
+    font-size:12px;
+    font-family:Microsoft YaHei;
+    font-weight:400;
+    color:rgba(58,135,228,1);
+    line-height:20px;
+    img {
+      margin-top: 6px;
+      width: 25px;
+      height: 25px;
+      margin-right: 30px;
+    }
+  }
+}
+
+.footer{
+  width: 100%;
+  height: 50px;
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  line-height: 50px;
+}
+.footerText{
+  font-size: 12px;
+}
+.footerText:hover{
+  color:grey;
+}

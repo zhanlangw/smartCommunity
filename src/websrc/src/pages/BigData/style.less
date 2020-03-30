@@ -1,0 +1,301 @@
+@import "~antd/lib/style/themes/default.less";
+
+:global(.ant-modal-title){
+  color: #fff;
+}
+:global(.ant-modal-close-x) {  color: #fff; }
+:global(.ant-calendar-range.ant-calendar-time .ant-calendar-footer .ant-calendar-time-picker-btn) {
+      display: none !important;
+}
+//main {
+//
+//}
+:global(.BMap_cpyCtrl) {
+  display:none;
+}
+:global(.anchorBL){
+  display:none;
+}
+
+
+
+.BigDataLayouts {
+  background: url("../../assets/BigDataBankground.png") center center / cover no-repeat;
+  padding: 0 10px;
+  width: 100%;
+  height: 93.2vh;
+  color: #fff;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  :global {
+    .ant-row {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+      margin-left: 0px !important;
+      margin-right: 0px !important;
+    }
+    // 大数据的时间选择框
+    .ant-input{
+      background-color: rgba(1, 24, 66, 1);
+      color: rgba(255, 255, 255, 1);
+      border-color: #4C5FC1;
+    }
+
+    .ant-calendar-picker-clear, .ant-calendar-picker-icon{
+      background-color: rgba(1, 24, 66, 1);
+      color:rgba(255, 255, 255, 1);
+    }
+    .ant-col {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+    .ant-select-dropdown-menu-item-selected {
+      background: #3A87E4 !important;
+    }
+    .ant-select-dropdown-menu-item-active {
+      background: rgba(76, 95, 193, 1) !important;
+    }
+
+    .ant-select-selection--single {
+      background: rgba(5, 28, 69, 1);
+      border: 1px solid rgba(234, 234, 234, 0.2);
+      border-radius: 3px;
+      color: #fff;
+    }
+
+    .ant-select-dropdown-menu-item ant-select-dropdown-menu-item-selected {
+      color: #fff !important;
+      font-width: normal;
+
+    }
+    //下拉框滚动条背景色及滚动框背景色
+    ul.ant-select-dropdown-menu.ant-select-dropdown-menu-root.ant-select-dropdown-menu-vertical::-webkit-scrollbar {
+        width: 0;
+        background: rgba(5, 28, 69, 1);
+    }
+
+    ul.ant-select-dropdown-menu.ant-select-dropdown-menu-root.ant-select-dropdown-menu-vertical::-webkit-scrollbar-thumb {
+      background-color: rgba(76, 95, 193, 1) !important;
+    }
+
+
+    .ant-select-arrow-icon{
+      font-size: 12px;
+      color: #fff;
+    }
+
+  }
+
+  .BigDataHeader {
+    text-align: center;
+    font-size:32px;
+    font-family:Source Han Sans CN;
+    font-weight:bold;
+    color:rgba(80,254,193,1);
+    line-height:8.7vh;
+    height: 10vh;
+    background-image: url("../../assets/BigDataHeader.png");
+    background-size: 100% 100%;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 102%;
+    margin-left: -1%;
+    img{
+      //margin-top: 1.7vh;
+      //float: right;
+      //margin-right: 10px;
+      cursor: pointer;
+      position: absolute;
+      top: 1.7vh;
+      right: 1.5vw;
+    }
+  }
+}
+
+.BigDataLayouts::-webkit-scrollbar {
+  display: none;
+}
+
+.BigDataList {
+  height: 25vh;
+  margin-bottom: 10px;
+  background-image: url("../../assets/Border.png");
+  background-size: 100% 100%;
+  background-origin: content-box;
+  .BigDataItem {
+    text-align: center;
+    background:linear-gradient(83deg, rgba(13,180,251,1), rgba(115,85,190,1));
+    padding: 3px;
+    border-radius: 5px;
+    //border:2px solid;
+    //border-image:linear-gradient(83deg, rgba(13,180,251,1), rgba(115,85,190,1)) 2 2;
+    width: 26%;
+    height: 6vh;
+
+    div {
+      line-height: 250%;
+      width: 100%;
+      height: 100%;
+      font-size:22px;
+      border-radius: 5px;
+      margin-bottom: 5px;
+      font-family:Source Han Sans CN;
+      font-weight:400;
+      color:rgba(255,255,255,1);
+      background:rgba(8,43,85,1);
+    }
+  }
+
+  span{
+    display: block;
+    padding-bottom: 1.3vh;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size:16px;
+    font-family:Source Han Sans CN;
+    font-weight:400;
+    color:rgba(25,209,255,1);
+  }
+}
+
+  .BigDataRadar {
+    width: 100%;
+    height: 26vh;
+    background-image: url("../../assets/Border.png");
+    background-size: 100% 100%;
+    background-origin: content-box;
+    header {
+      padding-top: 10px;
+      position:relative;
+      :global {
+        .ant-select-sm {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          width: 120px;
+        }
+      }
+
+      span{
+        padding-left: 10px;
+        font-size:16px;
+        font-weight:400;
+        color: rgba(25,209,255,1);
+      }
+    }
+  }
+
+  .BigDataMap {
+    width: 100%;
+    height: 52vh;
+    background-image: url("../../assets/Border.png");
+    background-size: 100% 100%;
+    background-origin: content-box;
+  }
+
+  .BigDataLine {
+    width: 100%;
+    height: 24vh;
+    background-image: url("../../assets/X_border.png");
+    background-size: 100% 100%;
+    background-origin: content-box;
+    text-align: center;
+    position:relative;
+    header {
+      padding-top: 10px;
+      padding-bottom: 2vh;
+    }
+    span {
+      font-size:16px;
+      font-weight:400;
+      color: rgba(25,209,255,1);
+    }
+
+    .line_left_icon {
+      background: url('../../assets/left.png') center center no-repeat;
+      width: 15px;
+      height: 20px;
+      margin-left: 15px;
+      cursor: pointer;
+    }
+
+    .line_right_icon {
+      background: url('../../assets/right.png') center center no-repeat;
+      width: 15px;
+      height: 20px;
+      margin-right: 15px;
+      cursor: pointer;
+    }
+
+    :global {
+      .ant-select-sm {
+        position: absolute;
+        right: 3vw;
+        top: 3vh;
+        width: 120px;
+      }
+    }
+  }
+
+  .BigDataBar {
+    text-align: center;
+    width: 100%;
+    height: 77vh;
+    background-image: url("../../assets/Y_border.png");
+    background-size: 100% 100%;
+    background-origin: content-box;
+
+    span{
+      padding-top: 20px;
+      font-size:14px;
+      font-family:Source Han Sans CN;
+      font-weight:400;
+      color:rgba(25,209,255,1);
+      display: block;
+      padding-top: 20px;
+    }
+  }
+
+  .BigDataSelect {
+    background: rgba(5,28,69,1);
+    font-width: normal;
+
+  }
+
+.BigDataSelect::-webkit-scrollbar {
+  display: none;
+}
+
+
+.span-style {
+    padding-left: 10px;
+    font-size:16px;
+    font-weight:400;
+    color: rgba(25,209,255,1);
+  }
+
+.map_max {
+  background-image:url("../../assets/bigDataMax.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: -50px;
+}
+
+.map_max:hover{
+  background-image: url("../../assets/bigDataMax_active.png");
+  cursor: pointer;
+}
+
+.map_min{
+  background-image: url("../../assets/bigDataMin.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: -50px;
+}
+
+.map_min:hover{
+  background-image: url("../../assets/bigDataMin_active.png");
+  cursor: pointer;
+}

@@ -1,0 +1,31 @@
+@import '~antd/lib/style/themes/default.less';
+
+.query{
+    width: 385px;
+    position: fixed;
+    // top: 118px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;  
+    box-shadow: -2px -1px 8px #bfbfbf;
+    transition: transform .2s;
+    .header{
+        text-align: center;
+        flex-basis: 52px;
+        line-height: 52px;
+        background: @primary-color;
+        color:#fff;
+    }
+    .content{
+        background: #fafafa;
+        padding: 8px;
+        flex: 1; 
+    }
+    .footer{
+        flex-basis: 52px;
+        line-height: 52px;
+        background: #f0f0f0;
+        text-align: center;
+    }
+}

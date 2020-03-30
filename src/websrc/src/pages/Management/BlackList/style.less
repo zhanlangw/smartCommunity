@@ -1,0 +1,118 @@
+@import "~antd/lib/style/themes/default.less";
+
+.avatar-uploader>.ant-upload {
+  width: 128px;
+  height: 128px;
+}
+
+
+
+:global(.ant-pro-basicLayout-content){
+  margin: 0;
+}
+
+
+:global(.ant-modal-title){
+  color: #fff;
+}
+:global(.ant-modal-close-x) {  color: #fff; }
+
+:global(.ant-modal-wrap) {
+  z-index: 900;
+}
+
+:global(.ant-modal-mask) {
+  z-index: 800;
+}
+
+
+.previewModalWarp {
+  :global {
+    .ant-modal-footer {
+      display: none;
+    }
+    .ant-modal-body {
+      padding: 0;
+    }
+  }
+}
+
+.leftClose {
+  position: absolute;
+  top:-5px;
+  left:89px;
+  z-index:10;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.rightClose {
+  position: absolute;
+  top:-5px;
+  right:-224px;
+  z-index:10;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+//案卷详情切换
+.noLeft{
+  background-image: url("../../../assets/noLeft.png");
+  margin-top: 86px;
+  cursor: not-allowed;
+  height: 20px;
+  width: 10px;
+  padding:10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.arrowsLeft{
+  background-image: url("../../../assets/left.png");
+  margin-top: 86px;
+  cursor: pointer;
+  height: 20px;
+  width: 10px;
+  padding:10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.arrowsLeft:hover{
+  background-image: url("../../../assets/left2.png");
+}
+
+.arrowsLeft:active{
+  background-image: url("../../../assets/left.png");
+}
+
+.noRight{
+  background-image: url("../../../assets/noRight.png");
+  margin-top: 86px;
+  cursor: not-allowed;
+  height:20px;
+  width: 10px;
+  padding:10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.arrowsRgiht{
+  background-image: url("../../../assets/right.png");
+  margin-top: 86px;
+  cursor: pointer;
+  height: 20px;
+  width: 10px;
+  padding:10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.arrowsRgiht:hover{
+  background-image: url("../../../assets/right2.png");
+}
+.arrowsRgiht:active{
+  background-image: url("../../../assets/right.png");
+}

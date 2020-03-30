@@ -1,0 +1,54 @@
+@import '~antd/es/style/themes/default.less';
+
+//滚动条隐藏
+.div_warp {
+  height: 93vh;
+  overflow-y: scroll;
+}
+
+.div_warp::-webkit-scrollbar {
+  display: none;
+}
+
+:global(.ant-calendar-range.ant-calendar-time .ant-calendar-footer .ant-calendar-time-picker-btn) {
+  display: none !important;
+}
+
+:global(.ant-pro-basicLayout-content){
+  margin: 0;
+}
+
+:global(.ant-modal-title){y
+  color: #fff;
+}
+
+:global(.ant-modal-close-x) {  color: #fff; }
+
+
+.fileWarpCard{
+  z-index: 0;
+  :global{
+    .ant-card-body{
+      padding:  0;
+    }
+    .ant-typography{
+      margin-bottom: 0;
+    }
+    .ant-tab-bar{
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+}
+
+.fileStateFormWarp {
+
+  :global {
+    .ant-form-item {
+      margin: 0;
+    }
+  }
+}
+
+

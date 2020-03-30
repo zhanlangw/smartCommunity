@@ -1,0 +1,70 @@
+server:
+  port: 8066
+  tomcat:
+    basedir: fileData/tomcat
+    max-threads: 1000
+    min-spare-threads: 500
+  compression:
+    mime-types: application/javascript,text/javascript,text/css
+    enabled: true
+    min-response-size: 2048
+spring:
+  http:
+    multipart:
+      enabled: false
+  application:
+    name: smartCommunity #项目名称
+  data:
+    mongodb:
+      host: 192.168.3.8
+      port: 27017
+      database: smartCommunity
+  redis:
+      host: 127.0.0.1
+      port: 6379
+      pool:
+        max-active: 10000
+        max-wait: 10000
+        max-idle: 1000
+
+      timeout: 100000
+  social:
+    facebook:
+      app-id:
+face:
+  ip: 192.168.3.200
+  port: 9090
+  updface: /api/face/reg
+  delface: /api/face/del
+  upddevice: /api/camera/reg
+  deldevice: /api/camera/del
+  upddevicestatus: /api/camera/status
+  ask: /api/face/ack
+  updfence: /api/fence/reg
+  delfence: /api/fence/del
+  fenceopt: /api/fence/opt
+  play: aaa
+  stop: aaa
+video:
+  ip: 172.16.53.253
+  port: 8066
+  up: /api/video/controlUp
+  down: /api/video/controlDown
+  left: /api/video/controlLeft
+  right: /api/video/controlRight
+  login: /api/video/login
+  logout: /api/video/logout
+outPut: 192.168.3.8
+outAddress: 192.168.3.8
+outPort: 8090
+rtmp: 1935
+user: bytecloud
+password: qweasd123
+inNet: 192.168.3.8
+ffmpeg: /usr/local/ffmpeg/bin/
+split: byteclo
+ai:
+  inspectionTime: 72000000
+address:
+  timeout: 900000
+

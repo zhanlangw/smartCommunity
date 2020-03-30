@@ -1,0 +1,11 @@
+#选择项目环境
+spring:
+  profiles:
+    active: dev
+#    active: test
+#    active: prod
+server:
+  # 单位 KB
+  max-http-header-size: 100000
+scan:
+  packages: cn.bytecloud.smartCommunity

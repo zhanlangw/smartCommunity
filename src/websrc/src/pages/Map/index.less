@@ -1,0 +1,93 @@
+@import "~antd/lib/style/themes/default.less";
+
+//:global(.ant-pro-basicLayout-content){
+//  margin: 0;
+//  margin-top: 10px;
+//}
+
+:global(.BMap_cpyCtrl) {
+  display: none;
+}
+
+:global(.anchorBL) {
+  display: none;
+}
+
+:global(.ant-modal-title) {
+  color: #fff;
+}
+
+:global(.ant-modal-close-x) {
+  color: #fff;
+}
+
+.headerFormWrap {
+  position: relative;
+  margin-top: -4px;
+
+  :global {
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.alarmListModal {
+  :global {
+    .ant-table-content {
+      border: 1px solid #E6E9F0;
+      border-radius: 4px;
+    }
+
+    .ant-modal-footer {
+      display: none;
+    }
+  }
+}
+
+//缩放图标修改
+.my_map {
+  background-image: url("../../assets/mapMax.png");
+  background-position: center;
+  border-radius: 5px;
+}
+
+//鼠标悬停效果
+.my_map:hover {
+  background-image: url("../../assets/mapMax_active.png");
+  background-position: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+//缩放图标修改
+.map_min {
+  background-image: url("../../assets/mapMin.png");
+  background-position: center;
+  border-radius: 5px;
+}
+
+.map_min:hover {
+  background-image: url("../../assets/mapMin_active.png");
+  background-position: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.alarmImg {
+  animation: alarm 1s linear infinite;
+}
+
+@keyframes alarm {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

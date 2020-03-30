@@ -1,0 +1,104 @@
+<html>
+	<head>
+		<title>下载APP</title>
+		<meta charset="UTF-8"/>
+		<style type="text/css">
+			body{
+				font-size:2em;
+				background-color: #ececf1;
+			}
+			#main1{
+				text-align: center;
+			}
+			#more{
+				margin-top:88px;
+			}
+			#image-arr{
+				position: relative;
+				right:-150px;
+			}
+			#img-phone{
+				width:700px;
+				height:688px;
+			}
+			.footer{
+				text-align: center;
+			}
+			input[type=button]{
+
+				width:590px;
+				height:100px;
+				font-size: 36px;
+				margin-top:40px;
+				-webkit-appearance:none;
+				border:1px solid #bbb;
+				background-color:#fff;
+			}
+
+			#az{
+				background: url('/apps-az.png')  no-repeat;
+				background-position:45px;
+				background-color:#fff;
+				color:#a2c31f;
+			}
+			#ip{
+				background: url('/apps-iphone.png')  no-repeat;
+				background-position:45px;
+				background-color:#fff;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="main1">
+				<p id="more">请使用第三方浏览器打开 <img id="image-arr" src="/apps-arrow.png"/></p>
+				<div id='main'>
+				<img id="img-phone" src="/app-download.png"/>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<input type="button" id='az'  value="安卓/Android 下载"/> <br />
+			<input type="button" id='ip'  value="iPhone/iOS下载"/>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	function chenkWeChat(){
+        var ua = navigator.userAgent.toLowerCase();
+        if(ua.match(/MicroMessenger/i)=="micromessenger") {
+              return true;
+        } else {
+              return false;
+        }
+    }
+
+    if( !chenkWeChat() ){
+		document.getElementById('more').style.display='none';
+		document.getElementById('main1').style.marginTop='150px';
+    }
+
+	function download(){
+        var vs=navigator.userAgent;
+        if(vs.indexOf("iPad")!=-1 || vs.indexOf("iPhone")!=-1){
+            window.location.href="https://itunes.apple.com/cn/app/云秘书办公/id1329394376?mt=8";
+        }else{
+            window.location.href = "/uploads/smartCommunity.apk";
+        }
+	}
+
+	var az = document.getElementById('az');
+	var ip = document.getElementById('ip');
+	az.onclick=function(){
+		var vs=navigator.userAgent;
+	    if(vs.indexOf("iPad")!=-1 || vs.indexOf("iPhone")!=-1){
+            alert('不支持您的设备');
+            return;
+        }else{
+	       download();
+	    }
+	}
+	ip.onclick=function(){
+		download()
+	}
+</script>

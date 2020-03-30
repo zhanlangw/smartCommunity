@@ -1,0 +1,41 @@
+server:
+  port: 8066
+  tomcat:
+    basedir: fileData/tomcat
+  compression:
+    mime-types: application/javascript,text/javascript,text/css
+    enabled: true
+    min-response-size: 2048
+spring:
+  http:
+    multipart:
+      enabled: false
+  application:
+    name: smartCommunity #项目名称
+  data:
+    mongodb:
+      host: 192.168.6.11
+      port: 27017
+      database: smartCommunity
+      username: admin
+      password: admin
+      authentication-database: admin
+  redis:
+      host: 127.0.0.1
+      port: 6379
+      pool:
+        max-active: 1000
+        max-wait: 1000
+        max-idle: 100
+      timeout: 100000
+face:
+  ip: 192.168.3.200
+  port: 9090
+  updface: /api/face/reg
+  delface: /api/face/del
+  upddevice: /api/camera/reg
+  deldevice: /api/camera/del
+  ask: /api/face/ack
+input: 192.168.3.200
+output: 192.168.3.200
+outPort: 80

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg %n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+    <!-- DEBUG级别日志 appender -->
+    <appender name="LOGFILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 过滤器，只记录DEBUG级别的日志 -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <triggeringPolicy
+                class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <maxFileSize>10240MB</maxFileSize>
+        </triggeringPolicy>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- 按天回滚 daily -->
+            <fileNamePattern>logs/%d{yyyy-MM-dd}/smartCommunity.%i.log
+            </fileNamePattern>
+            <!-- 日志最大的历史 100天 -->
+            <maxHistory>100</maxHistory>
+            <maxFileSize>1000MB</maxFileSize>
+            <!--<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">-->
+            <!--</timeBasedFileNamingAndTriggeringPolicy>-->
+        </rollingPolicy>
+        <encoder>
+            <!--<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>-->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %X{req.remoteHost} %X{req.requestURI} %X{req.queryString} %-5level %logger{36} - %msg%n</pattern>
+            <!--%X{req.remoteHost} %X{req.requestURI}%n%d - %m%n-->
+        </encoder>
+    </appender>
+    <logger name="cn.bytecloud" additivity="true" level="info">
+        <!--<appender-ref ref="LOGFILE" />-->
+    </logger>
+    <logger name="org.apache.shiro.realm" additivity="true" level="warn">
+        <!--<appender-ref ref="LOGFILE" />-->
+    </logger>
+    <root level="info">
+        <appender-ref ref="LOGFILE"/>
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+
+
+</configuration>
+
+
+
+

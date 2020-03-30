@@ -1,0 +1,114 @@
+@import "~antd/lib/style/themes/default.less";
+
+:global(.ant-pro-basicLayout-content){
+  margin: 0;
+}
+
+
+:global(.ant-modal-title){
+  color: #fff;
+}
+:global(.ant-modal-close-x) {  color: #fff; }
+
+.mapChart {
+  padding-top: 24px;
+  height: 457px;
+  text-align: center;
+  img {
+    display: inline-block;
+    max-width: 100%;
+    max-height: 437px;
+  }
+}
+.sider{
+  width: 250px!important;
+  height: 91.5%;
+  flex: 0 0 250px!important;
+  max-width: 250px!important;
+  min-width: 250px!important;
+  border: 1px solid #E6E9F0;
+  :global {
+    .ant-layout-sider-children {
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    .ant-layout-sider-children::-webkit-scrollbar{
+      display: none;
+    }
+  }
+}
+
+.list{
+  :global{
+    .ant-list-item{
+      cursor: pointer;
+      &:hover{
+        background: @primary-color;
+        color:#fff;
+      }
+    }
+  }
+}
+.pieCard :global(.pie-stat) {
+  font-size: 24px!important;
+}
+
+.icon_company{
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-left: -10px;
+  background-image: url("../../../assets/icon_company.png");
+  background-position: center;
+  background-color: #3a87e4;
+  background-size: 16px;
+  background-repeat: no-repeat;
+  border-radius: 22px;
+}
+
+.icon_mechanism{
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-left: -10px;
+  background-image: url("../../../assets/icon_mechanism.png");
+  background-position: center;
+  background-color: #3a87e4;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  border-radius: 22px;
+}
+
+.icon_user{
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-left: -10px;
+  background-image: url("../../../assets/icon_person.png");
+  background-position: center;
+  //background-color: #3a87e4;
+  background-size: 16px;
+  background-repeat: no-repeat;
+  border-radius: 22px;
+}
+
+.icon_department{
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-left: -10px;
+  background-image: url("../../../assets/icon_department.png");
+  background-position: center;
+  //background-color: #3a87e4;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  border-radius: 22px;
+}
+
+
+
+@media screen and (max-width: @screen-lg) {
+  .mapChart {
+    height: auto;
+  }
+}

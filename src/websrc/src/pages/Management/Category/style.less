@@ -1,0 +1,80 @@
+@import "~antd/lib/style/themes/default.less";
+
+:global(.ant-pro-basicLayout-content){
+  margin: 0;
+}
+
+:global(.ant-modal-title){
+  color: #fff;
+}
+:global(.ant-modal-close-x) {  color: #fff; }
+
+.menuTableRight{
+  :global {
+    .ant-table-tbody > tr > td.ant-table-selection-column {
+      text-align: left;
+    }
+  }
+}
+
+
+.TreeMenuLeft {
+  margin: 0 10px;
+  background-color: #fff;
+  height: 91vh;
+  border-radius: 4px;
+  position: relative;
+  :global {
+    .ant-tree-switcher .ant-tree-switcher-noop {
+      display: none;
+    }
+
+    .ant-tree {
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+    .ant-tree::-webkit-scrollbar {
+      display: none;
+    }
+    .ant-tree-node-content-wrapper {
+      width: 100%;
+      padding: '0 20px';
+    }
+    .ant-list-item {
+      cursor: pointer;
+      padding: 5px 0;
+    }
+    .ant-list-item:hover {
+      background-color: #3a87e4;
+    }
+  }
+
+  .TreeMenuButton {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border: none;
+    background-color: #EDEDED;
+  }
+
+  .TreeMenuButton:hover {
+    background-color: #cdcdcd;
+  }
+}
+
+
+
+.icon_heading {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-left: -10px;
+  background-image: url("../../../assets/icon_heading.png");
+  background-position: center;
+  //background-color: #3a87e4;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  border-radius: 22px;
+}
+
+
