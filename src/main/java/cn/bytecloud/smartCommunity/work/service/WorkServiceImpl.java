@@ -1136,7 +1136,6 @@ public class WorkServiceImpl implements WorkService {
 
     @Override
     public Object appHistogram(AppHistogramStatsDto dto) {
-        long time = System.currentTimeMillis();
         List<CompletableFuture<Map<String, Map<String, Object>>>> resultFuture = dto.getUnit().stream().map(unit -> CompletableFuture.supplyAsync(() -> {
             List<String> unitIds = unitService.findAllByPid(unit.getId());
             unitIds.add(unit.getId());
